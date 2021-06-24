@@ -20,14 +20,14 @@ class GamesPagingSource(private val dao: GamesDao) : PagingSource<Int, Game>() {
         val position = params.key ?: STARTING_PAGE_INDEX
 
         return try {
-
-            var games = dao.getList(position, LIMIT)
-            if (games.size < LIMIT) {
-                games = Client.apiClient.getApiModels(CLIENT_ID, position, LIMIT).games.map {
-                    Game(it.game.name, it.channels, it.viewers, it.game.box.large)
-                }
-                dao.insertList(games)
+            var games = Client.apiClient.getApiModels(CLIENT_ID, position, LIMIT).games.map {
+                Game(it.game.name, it.channels, it.viewers, it.game.box.large)
             }
+
+            if (games.isNullOrEmpty()) {
+                games = dao.getList(position, LIMIT)
+            } else dao.insertList(games)
+
             LoadResult.Page(
                 data = games,
                 prevKey = if (position == STARTING_PAGE_INDEX) null else position - LIMIT,
