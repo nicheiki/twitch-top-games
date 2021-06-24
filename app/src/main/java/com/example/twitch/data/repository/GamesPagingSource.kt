@@ -30,8 +30,8 @@ class GamesPagingSource(private val dao: GamesDao) : PagingSource<Int, Game>() {
             }
             LoadResult.Page(
                 data = games,
-                prevKey = if (position == STARTING_PAGE_INDEX) null else position - 20,
-                nextKey = if (games.isEmpty()) null else position + 20
+                prevKey = if (position == STARTING_PAGE_INDEX) null else position - LIMIT,
+                nextKey = if (games.isEmpty()) null else position + LIMIT
             )
         } catch (exception: IOException) {
             return LoadResult.Error(exception)
