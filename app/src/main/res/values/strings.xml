@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Twitch</string>
+    <string name="rate_app">Оцените приложение</string>
+    <string name="review_title">Оставьте отзыв</string>
+    <string name="send">Отправить</string>
+    <string name="feedback_sent">Отзыв отправлен</string>
+    <string name="feedback_fail">Не удалось отправить отзыв</string>
+    <string name="game_title">Игра</string>
+    <string name="total_channels">Каналы</string>
+    <string name="total_viewers">Зрители</string>
+    <string name="load_state">Не удалось загрузить данные</string>
+    <string name="load_more">Загрузить больше игр</string>
+    <string name="update">Обновить</string>
+    <string name="no_elements_found">Ничего не найдено</string>
+    <string name="offline_mode">Оффлайн просмотр</string>
+</resources>

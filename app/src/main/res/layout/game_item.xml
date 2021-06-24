@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="272px"
+            android:layout_height="380px">
+
+
+            <ProgressBar
+                android:id="@+id/image_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp" />
+
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/game_title" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/channels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:width="0dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/total_channels" />
+
+    <TextView
+        android:id="@+id/viewers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:width="0dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/total_viewers" />
+
+
+</LinearLayout>
